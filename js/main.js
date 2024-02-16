@@ -31,7 +31,7 @@ const handleError = (msg) => {
 const renderCardContent = (data) => {
 	const {
 		joinCommunity: joinCommunityData,
-		monthlySubscription: monthlySubsriptionData,
+		monthlySubscription: monthlySubscriptionData,
 		whyUs: whyUsData,
 	} = JSON.parse(data);
 	const {
@@ -40,10 +40,10 @@ const renderCardContent = (data) => {
 		description: joinCommunityDescription,
 	} = joinCommunityData;
 	const {
-		title: monthlySubsriptionTitle,
-		price: monthlySubsriptionPrice,
-		description: monthlySubsriptionDescription,
-	} = monthlySubsriptionData;
+		title: monthlySubscriptionTitle,
+		price: monthlySubscriptionPrice,
+		description: monthlySubscriptionDescription,
+	} = monthlySubscriptionData;
 	const { title: whyUsTitle, benefits: whyUsBenefits } = whyUsData;
 
 	const cardTemplateNode = document.importNode(cardTemplate.content, true);
@@ -84,28 +84,28 @@ const renderCardContent = (data) => {
 
 	const sectionMonthlySubscriptionTitleEl =
 		sectionMonthlySubscriptionEl.querySelector('.card__title');
-	sectionMonthlySubscriptionTitleEl.textContent = monthlySubsriptionTitle;
+	sectionMonthlySubscriptionTitleEl.textContent = monthlySubscriptionTitle;
 
 	const sectionMonthlySubscriptionPriceEl =
 		sectionMonthlySubscriptionEl.querySelector('.card__price');
 	const sectionMonthlySubscriptionPriceAmountEl =
 		sectionMonthlySubscriptionPriceEl.querySelector('.num');
 	sectionMonthlySubscriptionPriceAmountEl.textContent =
-		monthlySubsriptionPrice.substring(
+		monthlySubscriptionPrice.substring(
 			0,
-			monthlySubsriptionPrice.indexOf(' ')
+			monthlySubscriptionPrice.indexOf(' ')
 		);
 	const sectionMonthlySubscriptionPriceLabelEl =
 		sectionMonthlySubscriptionPriceEl.querySelector('.label');
 	sectionMonthlySubscriptionPriceLabelEl.textContent =
-		monthlySubsriptionPrice.substring(
-			monthlySubsriptionPrice.indexOf(' ') + 1
+		monthlySubscriptionPrice.substring(
+			monthlySubscriptionPrice.indexOf(' ') + 1
 		);
 
 	const sectionMonthlySubscriptionDescriptionEl =
 		sectionMonthlySubscriptionEl.querySelector('.card__desc');
 	sectionMonthlySubscriptionDescriptionEl.textContent =
-		monthlySubsriptionDescription;
+		monthlySubscriptionDescription;
 
 	/* section why us */
 	const sectionWhyUsTemplateNode = document.importNode(
