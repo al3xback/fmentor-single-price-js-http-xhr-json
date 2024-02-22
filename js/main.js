@@ -50,7 +50,7 @@ const renderCardContent = (data) => {
 	const cardEl = cardTemplateNode.querySelector('.card');
 	const sectionGroupEl = cardTemplateNode.querySelector('.card__group');
 
-	/* section join community */
+	/* [section join community] */
 	const sectionJoinCommunityTemplateNode = document.importNode(
 		sectionJoinCommunityTemplate.content,
 		true
@@ -72,7 +72,7 @@ const renderCardContent = (data) => {
 		sectionJoinCommunityEl.querySelector('.card__desc');
 	sectionJoinCommunityDescriptionEl.textContent = joinCommunityDescription;
 
-	/* section monthly subscription */
+	/* [section monthly subscription] */
 	const sectionMonthlySubscriptionTemplateNode = document.importNode(
 		sectionMonthlySubscriptionTemplate.content,
 		true
@@ -107,7 +107,7 @@ const renderCardContent = (data) => {
 	sectionMonthlySubscriptionDescriptionEl.textContent =
 		monthlySubscriptionDescription;
 
-	/* section why us */
+	/* [section why us] */
 	const sectionWhyUsTemplateNode = document.importNode(
 		sectionWhyUsTemplate.content,
 		true
@@ -128,6 +128,7 @@ const renderCardContent = (data) => {
 		sectionWhyUsListEl.appendChild(sectionWhyUsListItemEl);
 	}
 
+	/* [init] */
 	removeLoading();
 	sectionGroupEl.appendChild(sectionMonthlySubscriptionTemplateNode);
 	sectionGroupEl.appendChild(sectionWhyUsTemplateNode);
